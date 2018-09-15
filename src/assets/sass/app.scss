@@ -9,10 +9,10 @@
 
 @import '~bootstrap/scss/bootstrap';
 @import '~github-calendar/dist/github-calendar.css';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
