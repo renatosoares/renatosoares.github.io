@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix
     .js('src/assets/js/app.js', 'dist/')
+    // .copyDirectory('node_modules/@fortawesome/fontawesome-free/webfonts', 'dist/fonts')
     .sass('src/assets/sass/app.scss', 'dist/');
 
 // Full API
