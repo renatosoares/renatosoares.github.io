@@ -2,7 +2,8 @@
   "name": "renatosoares.net.br",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/assets/js/app.js",
+  "typings": "./src/assets/js/app.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -36,7 +37,8 @@
     "popper.js": "^1.12",
     "ts-loader": "^3.5.0",
     "typescript": "^2.9.2",
-    "vue": "^2.5.7"
+    "vue": "^2.5.7",
+    "vue-class-component": "^6.2.0"
   },
   "dependencies": {}
 }
