@@ -12,8 +12,8 @@ let mix = require('laravel-mix');
  */
 
 mix
-    .js('src/assets/js/app.js', 'dist/')
-    .sass('src/assets/sass/app.scss', 'dist/')
+    .js('resources/assets/js/app.js', 'dist/')
+    .sass('resources/assets/sass/app.scss', 'dist/')
     .webpackConfig({
         module: {
             rules: [

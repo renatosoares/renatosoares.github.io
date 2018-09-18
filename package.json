@@ -2,8 +2,8 @@
   "name": "renatosoares.net.br",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/assets/js/app.js",
-  "typings": "./src/assets/js/app.d.ts",
+  "main": "./resources/assets/js/app.js",
+  "typings": "./resources/assets/js/app.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
