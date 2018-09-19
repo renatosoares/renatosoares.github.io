@@ -1,6 +1,7 @@
 <template>
     <div>
         <calendar-git-hub/>
+        <social-my/>
     </div>
 </template>
 

@@ -1,10 +1,12 @@
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import CalendarGitHub from './CalendarGitHub.vue';
+import SocialMy from './SocialMy.vue';
 
 @Component({
   components: {
     CalendarGitHub,
+    SocialMy,
   },
 })
 
