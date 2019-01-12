@@ -18,10 +18,10 @@ const config: GameConfig = {
     type: Phaser.AUTO,
     parent: "game",
     scene: [
-            BootScene,
-            MainMenuScene,
-            GameScene
-        ],
+        BootScene,
+        MainMenuScene,
+        GameScene
+    ],
     input: {
         keyboard: true,
         mouse: false,
@@ -31,20 +31,26 @@ const config: GameConfig = {
     physics: {
         default: "arcade",
         arcade: {
-        debug: false
+            debug: false
         }
     },
     backgroundColor: "#000000",
-    pixelArt: false,
-    antialias: true
+    render: {
+        pixelArt: false,
+        antialias: true,
+        autoResize: false
+    }
 };
 
-export class Game extends Phaser.Game {
-    constructor(config: GameConfig) {
+export class Game extends Phaser.Game
+{
+    constructor(config: GameConfig)
+    {
         super(config);
     }
 }
 
-window.onload = () => {
+window.addEventListener("load", () =>
+{
     var game = new Game(config);
-};
+});

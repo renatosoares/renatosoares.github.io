@@ -2,14 +2,17 @@
  * @description  Asteroid: Boot Scene
  */
 
-export class BootScene extends Phaser.Scene {
-    constructor() {
+export class BootScene extends Phaser.Scene
+{
+    constructor()
+    {
         super({
             key: "BootScene"
         });
     }
 
-    update(): void {
+    update(): void
+    {
         this.scene.start("MainMenuScene");
     }
 }

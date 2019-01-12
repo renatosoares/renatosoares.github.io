@@ -2,18 +2,22 @@
  * @description  Asteroid: Game Scene
  */
 
-export class GameScene extends Phaser.Scene {
-    constructor() {
+export class GameScene extends Phaser.Scene
+{
+    constructor()
+    {
         super({
             key: "GameScene"
         });
     }
 
-    create(): void {
+    create(): void
+    {
 
     }
 
-    update(): void {
+    update(): void
+    {
 
     }
 }
