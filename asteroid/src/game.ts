@@ -2,7 +2,7 @@
  * @description  Asteroid: Game
  */
 
-/// <reference path="../../phaser.d.ts"/>
+/// <reference path="./phaser.d.ts"/>
 
 import "phaser";
 import { BootScene } from "./scenes/bootScene";
@@ -12,9 +12,9 @@ import { GameScene } from "./scenes/gameScene";
 const config: GameConfig = {
     title: "Asteroid",
     url: "https://renatosoares.net.br",
-    version: "0.1.0",
-    width: 800,
-    height: 600,
+    version: "0.1903.01",
+    width: window.innerWidth,
+    height: window.innerHeight,
     type: Phaser.AUTO,
     parent: "game",
     scene: [
