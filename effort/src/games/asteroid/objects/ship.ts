@@ -146,6 +146,13 @@ export class Ship extends Phaser.GameObjects.Graphics
 
     private shoot(): void
     {
+        this.bullets.push(
+            new Bullet(this.currentScene, {
+                x: this.x,
+                y: this.y,
+                rotation: this.rotation
+            })
+        );
     }
 
     private recoil(): void
@@ -163,5 +170,13 @@ export class Ship extends Phaser.GameObjects.Graphics
 
     private updateBullets(): void
     {
+        for (let i = 0; i < this.bullets.length; i++) {
+            if (this.bullets[i].active) {
+                this.bullets[i].update();
+            } else {
+                this.bullets[i].destroy();
+                this.bullets.splice(i, 1);
+            }
+        }
     }
 }

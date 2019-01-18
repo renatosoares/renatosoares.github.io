@@ -1,4 +1,3 @@
-
 /**
  * @description  Asteroid: Asteroid
  */
@@ -17,5 +16,19 @@ export class Asteroid extends Phaser.GameObjects.Graphics
     constructor(params)
     {
         super(params.scene, params);
+    }
+
+    public getRadius(): number
+    {
+        return this.radius;
+    }
+    public getBody(): any
+    {
+        return this.body;
+    }
+
+    public getSize(): number
+    {
+        return this.sizeOfAsteroid;
     }
 }
