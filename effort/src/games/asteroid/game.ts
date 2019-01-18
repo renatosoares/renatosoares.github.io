@@ -11,7 +11,7 @@ import { GameScene } from "./scenes/gameScene";
 
 const config: GameConfig = {
     title: "Asteroid",
-    url: "https://github.com/renatosoares/renatosoares.github.io",
+    url: "https://renatosoares.net.br",
     version: "0.1.0",
     width: 800,
     height: 600,
