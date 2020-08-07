@@ -1,1 +1,1 @@
-:rocket: [run](https://renatosoares.net.br/)
+:rocket: [run](https://renatosoares.dev)
