@@ -12,6 +12,15 @@
 body {
     background-color: #343a40;
     color: fff;
+
+    a {
+        text-decoration: none;
+
+        &:active,
+        &:visited {
+            color: inherit;
+        }
+    }
 }
 
 #app {
