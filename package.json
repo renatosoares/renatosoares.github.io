@@ -2,6 +2,7 @@
   "name": "renatosoares.dev",
   "version": "0.1.0",
   "private": true,
+  "typings": "./resources/assets/js/app.d.ts",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "github-calendar": "^2.2.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",

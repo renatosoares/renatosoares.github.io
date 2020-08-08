@@ -1,0 +1,10 @@
+.calendar {
+    margin-bottom: 30px;
+    width: 100%;
+
+    .contrib-column {
+        > .contrib-number {
+            color: #5f5f5f;
+        }
+    }
+}
