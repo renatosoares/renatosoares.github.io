@@ -1,1 +1,1 @@
-:rocket: [run](https://renatosoares.dev)
+:rocket: [run](//renatosoares.dev)
