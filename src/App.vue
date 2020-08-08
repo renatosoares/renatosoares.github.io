@@ -14,6 +14,7 @@ body {
     color: fff;
 
     a {
+        color: inherit;
         text-decoration: none;
 
         &:active,
@@ -24,20 +25,19 @@ body {
 }
 
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    -webkit-font-smoothing: antialiased;
     color: #788694;
-
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 
 #nav {
     padding: 30px;
 
     a {
-        font-weight: bold;
         color: #788694;
+        font-weight: bold;
 
         &.router-link-exact-active {
             color: #42b983;
