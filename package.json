@@ -1,46 +1,42 @@
 {
-  "name": "renatosoares.net.br",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./resources/assets/js/app.js",
+  "name": "renatosoares.dev",
+  "version": "0.1.0",
+  "private": true,
   "typings": "./resources/assets/js/app.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/renatosoares/renatosoares.ghithub.io.git"
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "github-calendar": "^2.2.1",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.3",
+    "vue-property-decorator": "^8.4.2",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/renatosoares/renatosoares.ghithub.io/issues"
-  },
-  "homepage": "https://github.com/renatosoares/renatosoares.ghithub.io#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.3.1",
-    "axios": "^0.18",
-    "bootstrap": "^4.0.0",
-    "cross-env": "^5.1",
-    "eslint": "^5.5.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-vue": "^4.7.1",
-    "github-calendar": "^1.2.3",
-    "jquery": "^3.2",
-    "laravel-mix": "^2.1.14",
-    "lodash": "^4.17.4",
-    "node-sass": "^4.9.3",
-    "popper.js": "^1.12",
-    "sass-loader": "^7.1.0",
-    "ts-loader": "^3.5.0",
-    "typescript": "^2.9.2",
-    "vue": "^2.5.7",
-    "vue-class-component": "^6.2.0"
-  },
-  "dependencies": {}
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.4.0",
+    "@vue/cli-plugin-eslint": "~4.4.0",
+    "@vue/cli-plugin-pwa": "~4.4.0",
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.9.3",
+    "vue-template-compiler": "^2.6.11"
+  }
 }

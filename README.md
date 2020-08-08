@@ -1,1 +1,1 @@
-:rocket: [run](//renatosoares.dev/)
+:rocket: [run](//renatosoares.dev)
