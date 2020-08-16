@@ -6,3 +6,12 @@
         </h1>
     </div>
 </template>
+<style lang="scss" scoped>
+.about {
+    h1 {
+        a {
+            word-break: break-all;
+        }
+    }
+}
+</style>
