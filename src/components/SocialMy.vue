@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed-bottom d-flex justify-content-between p-4">
+    <div class="p-4">
         <div class="social-links">
             <a href="//codepen.io/renatosoares" target="_blank">codepen&nbsp;</a>
             <a href="//codesandbox.io/u/renatosoares" target="_blank">codesandbox&nbsp;</a>
