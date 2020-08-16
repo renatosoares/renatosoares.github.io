@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="row">
-            <calendar-git-hub class="col-12 col-lg-8"></calendar-git-hub>
+        <div>
+            <calendar-git-hub></calendar-git-hub>
         </div>
-        <div class="row">
-            <social-my class="col-12"></social-my>
+        <div>
+            <social-my></social-my>
         </div>
     </div>
 </template>

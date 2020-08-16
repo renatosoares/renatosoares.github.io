@@ -9,35 +9,19 @@
 </template>
 
 <style lang="scss">
-body {
-    background-color: #343a40;
-    color: fff;
-
-    a {
-        text-decoration: none;
-
-        &:active,
-        &:visited {
-            color: inherit;
-        }
-    }
-}
-
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    -webkit-font-smoothing: antialiased;
     color: #788694;
-
+    text-align: center;
 }
 
 #nav {
     padding: 30px;
 
     a {
-        font-weight: bold;
         color: #788694;
+        font-weight: bold;
 
         &.router-link-exact-active {
             color: #42b983;

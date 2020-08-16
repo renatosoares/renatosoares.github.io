@@ -8,7 +8,7 @@ export default class CalendarGitHub extends Vue {
             ".calendar",
             "renatosoares",
             {
-                responsive: true
+                responsive: true,
             }
         );
     }
