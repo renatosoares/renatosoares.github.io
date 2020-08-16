@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2020-08-16
+### Added
+- bootstrap toolkit
+- social links
+
+### Fixed
+- mobile home
+
 ## [1.0.0] - 2020-08-08
 ### Added
 - basic information
