@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///src/views/About.vue"],"names":[],"mappings":"AASA,6BAGY,oBAAqB","file":"about.4505df98.css","sourcesContent":["\n\n\n\n\n\n\n\n\n.about {\n    h1 {\n        a {\n            word-break: break-all;\n        }\n    }\n}\n"]}
