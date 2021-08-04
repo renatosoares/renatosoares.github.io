@@ -1,7 +1,9 @@
 import React from "react";
 
+import SocialMy from "components/atoms/SocialMy";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <SocialMy />;
 };
 
 export default Home;

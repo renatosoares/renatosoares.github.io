@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
-
 @import "styles/libraries/bootstrap";
 
 @import "styles/variables-custom-properties";
@@ -24,6 +22,7 @@ body {
 // components %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // atoms -----------------------------------------------------------------------
+@import "styles/components/atoms/social-my";
 
 // molecules -------------------------------------------------------------------
 
@@ -32,3 +31,4 @@ body {
 // templates -------------------------------------------------------------------
 
 // pages -----------------------------------------------------------------------
+@import "styles/components/pages/home";
