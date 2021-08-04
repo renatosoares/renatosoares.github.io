@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+
+@import "styles/libraries/bootstrap";
+
+@import "styles/variables-custom-properties";
+
+body {
+  color: $white;
+  font-family: "Gruppo", cursive;
+
+  @extend .bg-dark;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:active,
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+// components %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// atoms -----------------------------------------------------------------------
+
+// molecules -------------------------------------------------------------------
+
+// organisms -------------------------------------------------------------------
+
+// templates -------------------------------------------------------------------
+
+// pages -----------------------------------------------------------------------
