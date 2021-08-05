@@ -1,0 +1,15 @@
+.calendar-github {
+  margin-bottom: 30px;
+  max-width: 750px;
+  width: 100%;
+
+  .contrib-footer {
+    display: none;
+  }
+
+  .contrib-column {
+    > .contrib-number {
+      color: var(--bs-gray);
+    }
+  }
+}
