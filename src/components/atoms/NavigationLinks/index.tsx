@@ -12,11 +12,19 @@ const NavigationLinks = () => {
         "navigation-links",
       ].join(" ")}
     >
-      <Link className={useRouteMatch("/")?.isExact ? "active" : ""} to="/">
-        Home
-      </Link>
       <Link
-        className={useRouteMatch("/about")?.isExact ? "active" : ""}
+        className={
+          useRouteMatch("/")?.isExact ? "router-link-exact-active" : ""
+        }
+        to="/"
+      >
+        Home
+      </Link>{" "}
+      |{" "}
+      <Link
+        className={
+          useRouteMatch("/about")?.isExact ? "router-link-exact-active" : ""
+        }
         to="/about"
       >
         About

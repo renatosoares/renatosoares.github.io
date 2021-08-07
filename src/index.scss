@@ -3,10 +3,13 @@
 @import "styles/variables-custom-properties";
 
 body {
+  @extend .bg-dark;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   color: $secondary;
   font-family: "Gruppo", cursive;
-
-  @extend .bg-dark;
+  text-align: center;
 
   a {
     color: inherit;

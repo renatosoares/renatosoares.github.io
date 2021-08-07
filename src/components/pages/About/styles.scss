@@ -1,0 +1,16 @@
+.about {
+  h1 {
+    a {
+      word-break: break-all;
+
+      &::before {
+        content: " ";
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--bs-green);
+      }
+    }
+  }
+}

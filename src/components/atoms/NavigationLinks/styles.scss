@@ -1,16 +1,12 @@
 .navigation-links {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: #788694;
   padding: 30px;
-  text-align: center;
 
   a {
-    color: #788694;
+    color: var(--bs-secondary);
     font-weight: bold;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: var(--bs-green);
     }
   }
 }
