@@ -14,15 +14,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   **Fixed** for any bug fixes.
 -   **Security** in case of vulnerabilities.
 
-## [Unreleased](https://github.com/renatosoares/renatosoares.github.io/compare/Unreleased...master) - 2021-00-00
+## [Unreleased](https://github.com/renatosoares/renatosoares.github.io/commits/Unreleased) - 2021-00-00
 
-## [2.0.0](https://github.com/renatosoares/renatosoares.github.io/compare/2.0.0...master) - 2021-08-08
+## [2.0.0](https://github.com/renatosoares/renatosoares.github.io/commits/2.0.0) - 2021-08-08
 
 ### Changed
 
 -   Changes architecture to React.
 
-## [1.1.0](https://github.com/renatosoares/renatosoares.github.io/compare/1.0.1...master) - 2020-08-16
+## [1.1.0](https://github.com/renatosoares/renatosoares.github.io/commits/1.0.1) - 2020-08-16
 
 ### Added
 
@@ -33,7 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 -   mobile home
 
-## [1.0.0](https://github.com/renatosoares/renatosoares.github.io/compare/1.0.0...master) - 2020-08-08
+## [1.0.0](https://github.com/renatosoares/renatosoares.github.io/commits/1.0.0) - 2020-08-08
 
 ### Added
 
