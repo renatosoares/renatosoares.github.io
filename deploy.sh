@@ -4,9 +4,9 @@ set -e
 
 npm run build
 
-cd dist
+cd build
 
-echo renatosoares.dev > CNAME
+echo renatosoares.dev >CNAME
 
 git init
 git add -A
