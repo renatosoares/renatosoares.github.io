@@ -34,9 +34,7 @@ const ChartPie = ({ codingData }: ChartPieProps) => {
           label: "Coding Languages",
           data: codingData.map((item) => item.percent),
           backgroundColor: codingData.map((item) => item.color),
-          parsing: {
-            yAxisKey: "percent",
-          },
+          borderWidth: 0,
           hoverOffset: 4,
         },
       ],
@@ -56,7 +54,7 @@ const ChartPie = ({ codingData }: ChartPieProps) => {
 };
 
 const CodingLanguages = () => (
-  <div className="container">
+  <div className="container my-5">
     <ChartPie codingData={mockLanguages} />
   </div>
 );

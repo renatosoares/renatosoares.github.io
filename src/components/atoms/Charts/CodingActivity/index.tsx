@@ -154,8 +154,8 @@ const ChartBar = ({ labels = [], amounts = [] }: ChartBarProps) => {
       datasets: [
         {
           label: "Coding Activity",
-          backgroundColor: "rgb(255, 99, 132)",
-          borderColor: "rgb(255, 99, 132)",
+          backgroundColor: "rgb(25, 135, 84)",
+          borderColor: "rgb(25, 135, 84)",
           data: amounts.map((item) => item.decimal),
         },
       ],
@@ -189,7 +189,7 @@ const ChartBar = ({ labels = [], amounts = [] }: ChartBarProps) => {
 };
 
 const CodingActivity = () => (
-  <div className="container">
+  <div className="container my-5">
     <ChartBar labels={formatLabels()} amounts={formatAmounts()} />
   </div>
 );
