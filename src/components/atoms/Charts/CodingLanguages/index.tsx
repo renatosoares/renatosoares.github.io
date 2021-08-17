@@ -1,8 +1,8 @@
-import { Chart, ChartConfiguration } from "chart.js";
 import React, { useEffect, useRef } from "react";
+import ApexCharts from "apexcharts";
 
 type ChartPieProps = {
-  codingData: { color: string; name: string; percent: number }[];
+  rawData: { color: string; name: string; percent: number }[];
 };
 
 const mockLanguages = [
@@ -23,39 +23,33 @@ const mockLanguages = [
   { color: "#aec7e8", name: "Text", percent: 0.02 },
 ];
 
-const ChartPie = ({ codingData }: ChartPieProps) => {
-  const canvasEl = useRef<HTMLCanvasElement>(null);
+const ChartPie = ({ rawData }: ChartPieProps) => {
+  const canvasEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const data = {
-      labels: codingData.map((item) => item.name),
-      datasets: [
-        {
-          label: "Coding Languages",
-          data: codingData.map((item) => item.percent),
-          backgroundColor: codingData.map((item) => item.color),
-          borderWidth: 0,
-          hoverOffset: 4,
-        },
-      ],
-    };
-
-    const config: ChartConfiguration = {
-      type: "pie",
-      data: data,
+    var options = {
+      chart: {
+        type: "pie",
+      },
+      series: rawData.map((item) => item.percent),
+      labels: rawData.map((item) => item.name),
+      legend: {
+        position: "top",
+      },
     };
 
     if (canvasEl.current !== null) {
-      new Chart(canvasEl.current, config);
+      const chart = new ApexCharts(canvasEl.current, options);
+      chart.render();
     }
   }, [canvasEl]);
 
-  return <canvas ref={canvasEl}></canvas>;
+  return <div ref={canvasEl}></div>;
 };
 
 const CodingLanguages = () => (
   <div className="container my-5">
-    <ChartPie codingData={mockLanguages} />
+    <ChartPie rawData={mockLanguages} />
   </div>
 );
 
