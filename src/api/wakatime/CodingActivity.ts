@@ -1,9 +1,7 @@
-"use strict";
-
 import Base from "./Base";
 
 class CodingActivity extends Base {
-  uuidCode: string;
+  private uuidCode: string;
 
   constructor() {
     super();
@@ -12,10 +10,8 @@ class CodingActivity extends Base {
       process.env.REACT_APP_WAKATIME_CHARTS_UUID_CODING_ACTIVITY || "";
   }
 
-  read() {
-    return fetch(`${this.base}${this.uuidCode}.json`, {
-      method: "GET",
-    });
+  async read() {
+    return await this.request(this.uuidCode);
   }
 }
 

@@ -1,9 +1,7 @@
-"use strict";
-
 import Base from "./Base";
 
 class CodingLanguages extends Base {
-  uuidCode: string;
+  private uuidCode: string;
 
   constructor() {
     super();
@@ -12,10 +10,8 @@ class CodingLanguages extends Base {
       process.env.REACT_APP_WAKATIME_CHARTS_UUID_CODING_LANGUAGES || "";
   }
 
-  read() {
-    return fetch(`${this.base}${this.uuidCode}.json`, {
-      method: "GET",
-    });
+  public read() {
+    return this.request(this.uuidCode);
   }
 }
 
