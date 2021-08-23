@@ -1,27 +1,42 @@
-class Base {
+abstract class Base {
   private base: string;
 
   constructor() {
     this.base = process.env.REACT_APP_WAKATIME_CHARTS_BASE_URI || "";
   }
 
-  protected async request(uuidCode: string) {
-    const myHeaders = new Headers();
+  protected abstract getUuidCode(): string;
+  protected abstract getDataKey(): string;
 
-    myHeaders.append("Accept", "application/json");
-    myHeaders.append("Content-Type", "application/json");
+  public request(loadData: (data: any) => void) {
+    const elBody = document.getElementsByTagName("body")[0];
+    const DATA_KEY = this.getDataKey();
 
-    const myInit: RequestInit = {
-      method: "GET",
-      headers: myHeaders,
-      mode: "no-cors",
-      // cache: "default",
-      // redirect: "follow",
-    };
+    function callback_data(response: any) {
+      localStorage.setItem(DATA_KEY, JSON.stringify(response.data));
+    }
 
-    const myRequest = new Request(`${this.base}${uuidCode}.json`, myInit);
+    const script = document.createElement("script");
+    const scriptLoad = document.createElement("script");
 
-    return await fetch(myRequest);
+    scriptLoad.type = "text/javascript";
+    scriptLoad.src = `${this.base}${this.getUuidCode()}.json?callback=${
+      callback_data.name
+    }`;
+
+    script.innerHTML = callback_data
+      .toString()
+      .replace("DATA_KEY", `'${DATA_KEY}'`);
+
+    elBody.appendChild(script);
+
+    elBody.appendChild(scriptLoad);
+
+    scriptLoad.addEventListener("load", () => {
+      loadData(JSON.parse(localStorage.getItem(DATA_KEY) || ""));
+
+      localStorage.removeItem(DATA_KEY);
+    });
   }
 }
 

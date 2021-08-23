@@ -1,14 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import ApexCharts from "apexcharts";
 
-type ChartBarProps = {
+import APICodingActivity from "api/wakatime/CodingActivity";
+
+type ChartLineProps = {
   rawData: {
     grand_total: { decimal: string; text: string };
     range: { text: string };
   }[];
 };
 
-const ChartBar = ({ rawData }: ChartBarProps) => {
+const ChartLine = ({ rawData }: ChartLineProps) => {
   const canvasEl = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -40,36 +42,14 @@ const CodingActivity = () => {
   const [dataActivity, setDataActivity] = useState([]);
 
   useEffect(() => {
-    function callback_data_coding_activity(response: any) {
-      localStorage.setItem(
-        "data_coding_activity",
-        JSON.stringify(response.data)
-      );
-    }
-
-    const script = document.createElement("script");
-    const scriptLoad = document.createElement("script");
-    scriptLoad.type = "text/javascript";
-    scriptLoad.src = `https://wakatime.com/share/@renatosoares/c6056f3b-486c-4b36-86ff-0db66e0442ec.json?callback=${callback_data_coding_activity.name}`;
-
-    script.innerHTML = callback_data_coding_activity.toString();
-
-    document.getElementsByTagName("body")[0].appendChild(script);
-
-    document.getElementsByTagName("body")[0].appendChild(scriptLoad);
-
-    scriptLoad.addEventListener("load", () => {
-      setDataActivity(
-        JSON.parse(localStorage.getItem("data_coding_activity") || "")
-      );
-
-      localStorage.removeItem("data_coding_activity");
+    new APICodingActivity().request((data) => {
+      setDataActivity(data);
     });
   }, []);
 
   return (
     <div id="coding-activity" className="container my-5">
-      {dataActivity.length > 0 && <ChartBar rawData={dataActivity} />}
+      {dataActivity.length > 0 && <ChartLine rawData={dataActivity} />}
     </div>
   );
 };

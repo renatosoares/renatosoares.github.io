@@ -2,6 +2,7 @@ import Base from "./Base";
 
 class CodingActivity extends Base {
   private uuidCode: string;
+  private readonly dataKey: string = "data_coding_activity";
 
   constructor() {
     super();
@@ -10,8 +11,12 @@ class CodingActivity extends Base {
       process.env.REACT_APP_WAKATIME_CHARTS_UUID_CODING_ACTIVITY || "";
   }
 
-  async read() {
-    return await this.request(this.uuidCode);
+  protected getUuidCode() {
+    return this.uuidCode;
+  }
+
+  protected getDataKey() {
+    return this.dataKey;
   }
 }
 
