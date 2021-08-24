@@ -12,7 +12,7 @@ abstract class Base {
     const elBody = document.getElementsByTagName("body")[0];
     const DATA_KEY = this.getDataKey();
 
-    function callback_data(response: any) {
+    function callback_jsonp(response: any) {
       localStorage.setItem(DATA_KEY, JSON.stringify(response.data));
     }
 
@@ -21,15 +21,15 @@ abstract class Base {
 
     scriptLoad.type = "text/javascript";
     scriptLoad.src = `${this.base}${this.getUuidCode()}.json?callback=${
-      callback_data.name
-    }`;
+      callback_jsonp.name
+    }_${this.getDataKey()}`;
 
-    script.innerHTML = callback_data
+    script.innerHTML = callback_jsonp
       .toString()
-      .replace("DATA_KEY", `'${DATA_KEY}'`);
+      .replace("DATA_KEY", `'${DATA_KEY}'`)
+      .replace(callback_jsonp.name, `${callback_jsonp.name}_${DATA_KEY}`);
 
     elBody.appendChild(script);
-
     elBody.appendChild(scriptLoad);
 
     scriptLoad.addEventListener("load", () => {
