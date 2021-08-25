@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/renatosoares/renatosoares.github.io/commits/Unreleased) - 2021-00-00
 
+## [2.1.0](https://github.com/renatosoares/renatosoares.github.io/commits/2.1.0) - 2021-08-25
+
+### Added
+
+-   Home page embedding of coding activity graphs.
+
 ## [2.0.0](https://github.com/renatosoares/renatosoares.github.io/commits/2.0.0) - 2021-08-08
 
 ### Changed
