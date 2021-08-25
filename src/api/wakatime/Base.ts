@@ -13,7 +13,7 @@ abstract class Base {
     const DATA_KEY = this.getDataKey();
 
     function callback_jsonp(response: any) {
-      localStorage.setItem(DATA_KEY, JSON.stringify(response.data));
+      localStorage.setItem("DATA_KEY", JSON.stringify(response.data));
     }
 
     const script = document.createElement("script");
@@ -26,7 +26,7 @@ abstract class Base {
 
     script.innerHTML = callback_jsonp
       .toString()
-      .replace("DATA_KEY", `'${DATA_KEY}'`)
+      .replace("DATA_KEY", `${DATA_KEY}`)
       .replace(callback_jsonp.name, `${callback_jsonp.name}_${DATA_KEY}`);
 
     elBody.appendChild(script);
