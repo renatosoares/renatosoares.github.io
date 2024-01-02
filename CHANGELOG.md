@@ -16,6 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/renatosoares/renatosoares.github.io/commits/Unreleased) - 2021-00-00
 
+## [Unreleased-3.x](https://github.com/renatosoares/renatosoares.github.io/commits/Unreleased-3.x) - 2024-00-00
+
+### Changed
+
+-   new stack
+
 ## [2.1.0](https://github.com/renatosoares/renatosoares.github.io/commits/2.1.0) - 2021-08-25
 
 ### Added
