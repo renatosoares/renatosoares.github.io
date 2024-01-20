@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  next-app:
+    container_name: next-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Set environment variables directly in the docker-compose file
+    # environment:
+    #   ENV_VARIABLE: ${ENV_VARIABLE}
+    #   NEXT_PUBLIC_ENV_VARIABLE: ${NEXT_PUBLIC_ENV_VARIABLE}
+
+    env_file:
+      - .env.development.docker
+    volumes:
+      - .:/home/node/app
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - renato_soares_network
+
+networks:
+  renato_soares_network:
+    driver: bridge
