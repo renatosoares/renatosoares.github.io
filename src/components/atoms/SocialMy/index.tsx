@@ -1,6 +1,7 @@
 import React from "react";
 import SocialMyStyles from "./SocialMy.module.scss";
-import "./styles.scss";
+// FIXME
+// import "./styles.scss";
 
 const SocialMy = () => (
   <div className={[SocialMyStyles.socialMy, "social-my"].join(" ")}>
