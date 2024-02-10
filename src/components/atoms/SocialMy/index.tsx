@@ -1,55 +1,71 @@
 import React from "react";
 import SocialMyStyles from "./SocialMy.module.scss";
-// FIXME
-// import "./styles.scss";
+
+const socialMyInfo: readonly SocialMyAnchorProps[] = [
+  {
+    url: "//codepen.io/renatosoares",
+    title: "codepen",
+  },
+  {
+    url: "//codesandbox.io/u/renatosoares",
+    title: "codesandbox",
+  },
+  {
+    url: "//github.com/renatosoares",
+    title: "github",
+  },
+  {
+    url: "//jsfiddle.net/user/renatosoarespro",
+    title: "jsfiddle",
+  },
+  {
+    url: "//linkedin.com/in/renatosoarespro",
+    title: "linkedin",
+  },
+  {
+    url: "//replit.com/@renatosoarespro",
+    title: "replit",
+  },
+  {
+    url: "//twitter.com/renatosoarespro",
+    title: "twitter",
+  },
+  {
+    url: "//wakatime.com/@renatosoares",
+    title: "wakatime",
+  },
+];
+
+type SocialMyAnchorProps = {
+  url: string;
+  title: string;
+};
+
+const SocialMyAnchor = ({ url, title }: SocialMyAnchorProps) => {
+  return (
+    <a href={url} target="_blank" rel="noreferrer">
+      {title} &nbsp;
+    </a>
+  );
+};
+
+const SocialLinks = () => {
+  return (
+    <div className={[SocialMyStyles.socialLinks, "social-links"].join(" ")}>
+      {socialMyInfo.map((social) => (
+        <SocialMyAnchor
+          key={social.title}
+          url={social.url}
+          title={social.title}
+        />
+      ))}
+    </div>
+  );
+};
 
 const SocialMy = () => (
   <div className={[SocialMyStyles.socialMy, "social-my"].join(" ")}>
-    <div className="social-links">
-      <a href="//codepen.io/renatosoares" target="_blank" rel="noreferrer">
-        codepen&nbsp;
-      </a>
-      <a
-        href="//codesandbox.io/u/renatosoares"
-        target="_blank"
-        rel="noreferrer"
-      >
-        codesandbox&nbsp;
-      </a>
-      <a href="//github.com/renatosoares" target="_blank" rel="noreferrer">
-        github&nbsp;
-      </a>
-      <a
-        href="//hub.docker.com/u/renatosoarespro/starred"
-        target="_blank"
-        rel="noreferrer"
-      >
-        docker&nbsp;
-      </a>
-      <a
-        href="//jsfiddle.net/user/renatosoarespro"
-        target="_blank"
-        rel="noreferrer"
-      >
-        jsfiddle&nbsp;
-      </a>
-      <a
-        href="//linkedin.com/in/renatosoarespro"
-        target="_blank"
-        rel="noreferrer"
-      >
-        linkedin&nbsp;
-      </a>
-      <a href="//repl.it/@renatosoarespro" target="_blank" rel="noreferrer">
-        repl&nbsp;
-      </a>
-      <a href="//twitter.com/renatosoarespro" target="_blank" rel="noreferrer">
-        twitter&nbsp;
-      </a>
-      <a href="//wakatime.com/@renatosoares" target="_blank" rel="noreferrer">
-        wakatime&nbsp;
-      </a>
-    </div>
+    <SocialLinks />
     <div>
       <h1>Systems Developer</h1>
       <span>Renato Soares </span>

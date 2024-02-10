@@ -1,3 +1,16 @@
 .socialMy {
-  background-color: red;
+  padding: 24px;
+  text-align: center;
+}
+
+.socialLinks {
+  word-break: break-all;
+  word-spacing: 5px;
+
+  a {
+    &:hover {
+      color:rgb(96, 120, 255);
+      text-decoration: underline;
+    }
+  }
 }
